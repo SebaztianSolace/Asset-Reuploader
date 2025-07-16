@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"net/url"
 	"strconv"
+	"time"
 
 	"github.com/kartFr/Asset-Reuploader/internal/roblox"
 )
@@ -64,6 +65,9 @@ func NewUploadAnimationHandler(
 	}
 
 	return func() (int64, error) {
+		// === ADDED: Wait 2 seconds before sending each request ===
+		time.Sleep(2 * time.Second)
+
 		req.AddCookie(&http.Cookie{
 			Name:  ".ROBLOSECURITY",
 			Value: c.Cookie,
