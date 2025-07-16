@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/kartFr/Asset-Reuploader/internal/roblox"
+	"github.com/SebaztianSolace/Asset-Reuploader/internal/roblox"
 )
 
 var UploadAnimationErrors = struct {
